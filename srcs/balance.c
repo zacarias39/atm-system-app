@@ -20,7 +20,7 @@ void	balance(t_user user)
 	green("\n=====--====>"); yellow("   THANK YOU FOR USING   "); green("<====--=====");
 	green("\n=====-----==> "); yellow("TYPE ANYTHING TO EXIT:\t");
 	scanf("%s", back);
-	yellow("\n=================================================");
+	yellow("=================================================");
 	green("\n=======----======> "); yellow("GOOD LUCK!");
 	green(" <======----========");
 	green("\n=======----======> "); yellow("EXITING..."); 

@@ -30,66 +30,66 @@ void	atm_services(t_user user)
 		yellow("==============================================");		
 		if (option == 1)
 		{
-			green("\n========----====> "); yellow("LOOK OUT!");
-			green(" <====----========");
+			green("\n========----====> "); yellow("BE CAREFUL!");
+			green(" <====----=======");
 			green("\n====---==> "); yellow("GOING TO 'ACCOUNT INFO'");
 			green(" <==---====");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			printf("\n");
 			sleep(2);
 			account_info(user);
 		}
 		else if (option == 2)
 		{
-			green("\n=======----====> "); yellow("BE CAREFUL!");
+			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
 			green("\n===--==> "); yellow("GOING TO 'VERIFY BALANCE' ");
 			green(" <==--====");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			printf("\n");
 			sleep(2);
 			balance(user);
 		}
 		else if (option == 3)
 		{
-			green("\n=======----====> "); yellow("BE CAREFUL!");
+			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
 			green("\n====--==> "); yellow("GOING TO 'WITHRAWAL MONEY'");
 			green(" <==--====");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			printf("\n");
 			sleep(2);
 			withdrawal(&user);
 		}
 		else if (option == 4)
 		{
-			green("\n=======----====> "); yellow("BE CAREFUL!");
+			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
 			green("\n====--==> "); yellow("GOING TO 'WITHRAWAL MONEY'");
 			green(" <==--====");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			printf("\n");
 			sleep(2);
 			withdrawal(&user);
 		}
 		else if (option == 5)
 		{
-			green("\n=======----====> "); yellow("BE CAREFUL!");
+			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
 			green("\n====--==> "); yellow("GOING TO 'WITHRAWAL MONEY'");
 			green(" <==--====");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			printf("\n");
 			sleep(2);
 			withdrawal(&user);
 		}
 		else if (option == 6)
 		{
-			green("\n=======----====> "); yellow("BE CAREFUL!");
+			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
 			green("\n====--==> "); yellow("GOING TO 'WITHRAWAL MONEY'");
 			green(" <==--====");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			printf("\n");
 			sleep(2);
 			withdrawal(&user);
@@ -97,12 +97,12 @@ void	atm_services(t_user user)
 		else if (option == 7)
 		{
 			green("\n=====--====>"); yellow("   THANK YOU FOR USING   "); green("<====--=====");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			green("\n=======----======> "); yellow("GOOD LUCK!");
 			green(" <======----========");
 			green("\n=======----======> "); yellow("EXITING..."); 
 			green(" <======----========");
-			yellow("\n=================================================");
+			yellow("\n==============================================");
 			printf("\n");
 			sleep(2);
 		}
