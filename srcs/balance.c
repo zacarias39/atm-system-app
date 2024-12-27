@@ -27,5 +27,5 @@ void	balance(t_user user)
 	green(" <======----========");
 	yellow("\n=================================================");
 	printf("\n");
-	sleep(3);
+	sleep(1);
 }

@@ -151,5 +151,5 @@ void	register_new_user(void)
 	strcat(link, username);
 	system(link);
 	fclose(fp);
-	sleep(3);
+	sleep(2);
 }

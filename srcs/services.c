@@ -1,6 +1,6 @@
 #include "../includes/function.h"
 
-void	atm_services(t_user user)
+void	atm_services(t_user *user)
 {
 	int	option;
 
@@ -9,11 +9,11 @@ void	atm_services(t_user user)
 	{
 		yellow("==============================================");
 		system("clear");
-		green("\n=====------==> "); red("ZCASIMIR'S ATM");
+		green("\n=====------==> ");  red("ZCASIMIR'S ATM");
 		green(" <==-------======");
 		green("\n=====---==>"); red("AUTOMATED TELLER MACHINE");
 		green("<==---=====");
-		green("\n=====---==>   "); red(toUpperCase(user.name));
+		green("\n=====---==>   "); red(toUpperCase(user->name));
 		green("\n=====---==>"); red(" SELECT THE TRANSACTION ");
 		green("<==---=====");  
 		yellow("\n==============================================");
@@ -36,19 +36,19 @@ void	atm_services(t_user user)
 			green(" <==---====");
 			yellow("\n==============================================");
 			printf("\n");
-			sleep(2);
-			account_info(user);
+			sleep(1);
+			account_info(*user);
 		}
 		else if (option == 2)
 		{
 			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
-			green("\n===--==> "); yellow("GOING TO 'VERIFY BALANCE' ");
+			green("\n====--==> "); yellow("GOING TO 'VERIFY BALANCE' ");
 			green(" <==--====");
 			yellow("\n==============================================");
 			printf("\n");
-			sleep(2);
-			balance(user);
+			sleep(1);
+			balance(*user);
 		}
 		else if (option == 3)
 		{
@@ -58,8 +58,8 @@ void	atm_services(t_user user)
 			green(" <==--====");
 			yellow("\n==============================================");
 			printf("\n");
-			sleep(2);
-			withdrawal(&user);
+			sleep(1);
+			withdrawal(user);
 		}
 		else if (option == 4)
 		{
@@ -69,8 +69,8 @@ void	atm_services(t_user user)
 			green(" <==--====");
 			yellow("\n==============================================");
 			printf("\n");
-			sleep(2);
-			withdrawal(&user);
+			sleep(1);
+			withdrawal(user);
 		}
 		else if (option == 5)
 		{
@@ -80,8 +80,8 @@ void	atm_services(t_user user)
 			green(" <==--====");
 			yellow("\n==============================================");
 			printf("\n");
-			sleep(2);
-			withdrawal(&user);
+			sleep(1);
+			withdrawal(user);
 		}
 		else if (option == 6)
 		{
@@ -91,20 +91,24 @@ void	atm_services(t_user user)
 			green(" <==--====");
 			yellow("\n==============================================");
 			printf("\n");
-			sleep(2);
-			withdrawal(&user);
+			sleep(1);
+			withdrawal(user);
 		}
 		else if (option == 7)
 		{
-			green("\n=====--====>"); yellow("   THANK YOU FOR USING   "); green("<====--=====");
+			green("\n=====--===>"); yellow("   THANK YOU FOR USING  "); green("<===--=====");
 			yellow("\n==============================================");
-			green("\n=======----======> "); yellow("GOOD LUCK!");
-			green(" <======----========");
-			green("\n=======----======> "); yellow("EXITING..."); 
-			green(" <======----========");
+			green("\n=======----====> "); yellow("GOOD LUCK!");
+			green(" <=====----========");
+			green("\n=======----====> "); yellow("EXITING..."); 
+			green(" <=====----========");
 			yellow("\n==============================================");
 			printf("\n");
-			sleep(2);
+		}
+		else
+		{
+			printf("\n");
+			continue ;
 		}
 	}
 }

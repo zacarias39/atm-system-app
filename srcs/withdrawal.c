@@ -1,5 +1,13 @@
 #include "../includes/function.h"
 
+void	message(void)
+{
+	yellow("\n==============================================");
+	green("\n=====-----===>"); yellow("TRANSACTION COMPLETE"); green("<===----====");
+	green("\n=====--====>"); yellow("  THANK YOU FOR USING  "); green("<===--=====");
+	yellow("\n==============================================");
+}
+
 float	other_amount(t_user user)
 {
 	float	amount;
@@ -21,8 +29,9 @@ float	other_amount(t_user user)
 	yellow("==============================================");
 	green("\n=====-----===>"); yellow("TRANSACTION COMPLETE"); green("<===----====");
 	green("\n=====--====>"); yellow("  THANK YOU FOR USING  "); green("<===--=====");
+	yellow("\n==============================================");
 	printf("\n");
-	sleep(3);
+	sleep(1);
 	return (amount);
 }
 
@@ -56,45 +65,50 @@ float	select_amount(t_user user)
 	{	
 		green("\n====---==>"); yellow("SELECTED AMOUNT '10.000KZ'");
 		green("<==---====");
-		yellow("\n==============================================");
+		if (user.balance < 10000)
+			message();
 		printf("\n");
-		sleep(3);
+		sleep(2);
 		return (10000);
 	}
 	else if (option == 2)
 	{
 		green("\n=====---==>"); yellow("SELECTED AMOUNT '5.000KZ'");
 		green("<==---====");
-		yellow("\n==============================================");
+		if (user.balance < 5000)
+			message();
 		printf("\n");
-		sleep(3);
+		sleep(2);
 		return (5000);
 	}
 	else if (option == 3)
 	{
 		green("\n====---==>"); yellow("SELECTED AMOUNT '25.000KZ'");
 		green("<==---====");
-		yellow("\n==============================================");
+		if (user.balance < 25000)
+			message();
 		printf("\n");
-		sleep(3);
+		sleep(2);
 		return (25000);
 	}	
 	else if (option == 4)
 	{
 		green("\n=====---==>"); yellow("SELECTED AMOUNT '2.000KZ'");
 		green("<==---====");
-		yellow("\n==============================================");
+		if (user.balance < 2000)
+			message();
 		printf("\n");
-		sleep(3);
+		sleep(2);
 		return (2000);
 	}	
 	else if (option == 5)
 	{
 		green("\n====---==>"); yellow("SELECTED AMOUNT '50.000KZ'");
 		green("<==---====");
-		yellow("\n==============================================");
+		if (user.balance < 50000)
+			message();
 		printf("\n");
-		sleep(3);
+		sleep(2);
 		return (50000);
 	}
 	else if (option == 6)
@@ -105,7 +119,7 @@ float	select_amount(t_user user)
 		green(" <==---====");
 		yellow("\n==============================================");
 		printf("\n");
-		sleep(3);
+		sleep(1);
 		return (other_amount(user));
 	}
 	else if (option == 7)
@@ -116,7 +130,7 @@ float	select_amount(t_user user)
 		green(" <====----========");
 		yellow("\n==============================================");
 		printf("\n");
-		sleep(3);
+		sleep(1);
 		return (0.0);
 	}
 	return (0.0);
@@ -142,6 +156,6 @@ void	withdrawal(t_user *user)
 		yellow("\n==============================================");
 		yellow("\n==============================================");
 		printf("\n");
-		sleep(5);
+		sleep(4);
 	}
 }

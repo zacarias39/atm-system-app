@@ -8,7 +8,7 @@ int	main(void)
 	while (option != 3)
 	{
 		system("clear");
-		yellow("\n=============================================");
+		yellow("=============================================");
 		green("\n=====------==> "); red("ZCASIMIR'S ATM"); green(" <==-------=====");
 		green("\n=====--==>"); red("AUTOMATED TELLER  MACHINE"); green("<==--====="); 
 		yellow("\n=============================================");
@@ -32,7 +32,7 @@ int	main(void)
 			green(" <<====----====");
 			yellow("\n=============================================");
 			printf("\n");
-			sleep(2);
+			sleep(1);
 			login();
 		}
 		else if (option == 2)
@@ -43,7 +43,7 @@ int	main(void)
 			green(" <==--====");
 			yellow("\n=============================================");
 			printf("\n");
-			sleep(2);
+			sleep(1);
 			register_new_user();
 		}
 		else if (option == 3)

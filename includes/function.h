@@ -36,7 +36,7 @@ char	*ft_strcat(char *dest, char *src);
 void	error(int display, char *str);
 void	register_new_user(void);
 void	login(void);
-void	atm_services(t_user user);
+void	atm_services(t_user *user);
 void	account_info(t_user user);
 void	balance(t_user user);
 void	withdrawal(t_user *user);

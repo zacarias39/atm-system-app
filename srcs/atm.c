@@ -23,7 +23,7 @@ void	login(void)
 		green("\n==->"); blue("USERNAME OR PHONE:"); green("\t");
 		scanf(" %s", user_name_phone);
 		yellow("=============================================");
-		green("\n=====----==>"); blue(" PIN:"); green("\t");
+		green("\n=====-----=====>"); blue("PIN:"); green("\t");
 		scanf(" %s", pin);
 		yellow("=============================================");
 		if (str_isdigit(user_name_phone))
@@ -64,8 +64,8 @@ void	login(void)
 			green(" <==--===");
 			yellow("\n=============================================");
 			printf("\n");
+			sleep(1);
 			fclose(fp);
-			sleep(3);
 			break ;
 		}
 		else
@@ -78,10 +78,33 @@ void	login(void)
 			yellow("\n=============================================");
 			printf("\n");
 			fclose(fp);
-			sleep(3);
+			sleep(2);
 		}
 	}
 	if (is_correct)
-		atm_services(login);
-	sleep(2);
+	{
+		strcpy(user, "../phones/");
+		strcat(user, login.phone);
+		strcat(user, ".dat");
+		fp = fopen(user, "w");
+		if (!fp)
+		{
+			error(0, "USER ALTERATION NOT SAVED");
+			printf("\n");
+			fclose(fp);
+			sleep(3);
+			return ;
+		}
+		atm_services(&login);
+		if (!fwrite(&login, sizeof(t_user), 1, fp))
+		{
+			error(0, "USER ALTERATION NOT SAVED");
+			printf("\n");
+			fclose(fp);
+			sleep(3);
+			return ;
+		}
+		fclose(fp);
+	}
+	sleep(1);
 }
