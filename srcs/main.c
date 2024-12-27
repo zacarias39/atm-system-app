@@ -9,12 +9,10 @@ int	main(void)
 	{
 		system("clear");
 		yellow("\n=============================================");
-		green("\n=====------==> "); red("ZCASIMIR'S ATM");
-		green(" <==-------=====");
-		green("\n=====--==>"); red("AUTOMATED TELLER  MACHINE");
-		green("<==--====="); 
+		green("\n=====------==> "); red("ZCASIMIR'S ATM"); green(" <==-------=====");
+		green("\n=====--==>"); red("AUTOMATED TELLER  MACHINE"); green("<==--====="); 
 		yellow("\n=============================================");
-		green("\n===="); red("[1]"); green("=====---==> "); blue("LOGIN");
+		green("\n===="); red("[1]"); green("=====---==> "); blue("LOGIN"); 
 		green(" <===---======"); red("[1]"); green("====");
 		yellow("\n=============================================");
 		green("\n===="); red("[2]"); green("==--==> "); blue("REGISTER A USER");

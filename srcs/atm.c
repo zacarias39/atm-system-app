@@ -23,7 +23,7 @@ void	login(void)
 		green("\n==->"); blue("USERNAME OR PHONE:"); green("\t");
 		scanf(" %s", user_name_phone);
 		yellow("=============================================");
-		green("\n==->"); blue("PIN:"); green("\t");
+		green("\n=====----==>"); blue(" PIN:"); green("\t");
 		scanf(" %s", pin);
 		yellow("=============================================");
 		if (str_isdigit(user_name_phone))
@@ -51,6 +51,7 @@ void	login(void)
 			tries -= 1;
 			error(0, " CANNOT READ USER INFO");
 			printf("\n");
+			fclose(fp);
 			sleep(3);
 			continue;
 		}
@@ -63,6 +64,7 @@ void	login(void)
 			green(" <==--===");
 			yellow("\n=============================================");
 			printf("\n");
+			fclose(fp);
 			sleep(3);
 			break ;
 		}
@@ -75,6 +77,7 @@ void	login(void)
 			green(" <==--===");
 			yellow("\n=============================================");
 			printf("\n");
+			fclose(fp);
 			sleep(3);
 		}
 	}

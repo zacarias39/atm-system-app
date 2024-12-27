@@ -128,7 +128,7 @@ void	register_new_user(void)
 		scanf("%f", &user.balance);
 		yellow("=============================================");
 	}
-	green("\n==->"); blue("BALANCE:"); printf("\t%.2f", user.balance);
+	green("\n==->"); blue("BALANCE:"); printf("\t\033[1;31m%.2f", user.balance);
 	yellow("\n=============================================");
 	if (!fwrite(&user, sizeof(t_user), 1, fp))
 	{
