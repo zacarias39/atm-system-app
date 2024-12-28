@@ -65,12 +65,12 @@ void	atm_services(t_user *user)
 		{
 			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
-			green("\n====--==> "); yellow("GOING TO 'WITHRAWAL MONEY'");
-			green(" <==--====");
+			green("\n====---==> "); yellow("GOING TO 'DEPOSIT MONEY'");
+			green(" <==---====");
 			yellow("\n==============================================");
 			printf("\n");
 			sleep(1);
-			withdrawal(user);
+			deposit(user);
 		}
 		else if (option == 5)
 		{

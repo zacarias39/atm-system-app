@@ -39,6 +39,7 @@ void	login(void);
 void	atm_services(t_user *user);
 void	account_info(t_user user);
 void	balance(t_user user);
+void	deposit(t_user *user);
 void	withdrawal(t_user *user);
 int		str_isdigit(char *str);
 
