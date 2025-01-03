@@ -42,5 +42,6 @@ void	balance(t_user user);
 void	deposit(t_user *user);
 void	withdrawal(t_user *user);
 int		str_isdigit(char *str);
+int		main(void);
 
 #endif

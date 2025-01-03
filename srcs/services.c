@@ -1,5 +1,54 @@
 #include "../includes/function.h"
 
+void	change_pin(t_user *user)
+{
+	char	pin[8];
+	int		is_correct = 0;
+	int		tries = 3;
+	
+	while (tries)
+	{
+		yellow("==============================================");
+		system("clear");
+		green("\n=====------==> ");  red("ZCASIMIR'S ATM");
+		green(" <==-------======");
+		green("\n=====---==>"); red("AUTOMATED TELLER MACHINE");
+		green("<==---=====");
+		green("\n=====------==> "); blue("ENTER OLD PIN:"); green("\t");
+		scanf(" %s", pin);
+		if (strcmp(user->pin, pin) == 0)
+		{
+			is_correct = 1;
+			break ;
+		}
+		else
+		{
+			tries -= 1;
+			green("\n======----====>> "); printf("\033[1;33m%d", tries);
+			yellow(" TRIES LEFT"); green(" <<====----======");
+			green("\n===---==> "); red("<<THE PIN IS NOT CORRECT>>");
+			green(" <==---===");
+			yellow("\n==============================================");
+			printf("\n");
+			sleep(2);
+		}
+	}
+	if (is_correct)
+	{
+		green("=====------==> "); blue("ENTER NEW PIN:"); green("\t");
+		scanf(" %s", user->pin);
+		green("=====--===>"); yellow("   THANK YOU FOR USING  "); green("<===--=====");
+		yellow("\n==============================================");
+		green("\n=======----====> "); yellow("EXITING..."); 
+		green(" <=====----========");
+		yellow("\n==============================================");
+		printf("\n");
+		sleep(2);
+		return ;
+	}
+	main();
+}
+
 void	atm_services(t_user *user)
 {
 	int	option;
@@ -76,12 +125,12 @@ void	atm_services(t_user *user)
 		{
 			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
-			green("\n====--==> "); yellow("GOING TO 'WITHRAWAL MONEY'");
-			green(" <==--====");
+			green("\n=====---==> "); yellow("GOING TO 'PIN CHANGE'.");
+			green(" <==---=====");
 			yellow("\n==============================================");
 			printf("\n");
 			sleep(1);
-			withdrawal(user);
+			change_pin(user);
 		}
 		else if (option == 6)
 		{

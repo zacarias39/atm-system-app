@@ -83,6 +83,7 @@ void	login(void)
 	}
 	if (is_correct)
 	{
+		atm_services(&login);
 		strcpy(user, "../phones/");
 		strcat(user, login.phone);
 		strcat(user, ".dat");
@@ -95,7 +96,6 @@ void	login(void)
 			sleep(3);
 			return ;
 		}
-		atm_services(&login);
 		if (!fwrite(&login, sizeof(t_user), 1, fp))
 		{
 			error(0, "USER ALTERATION NOT SAVED");

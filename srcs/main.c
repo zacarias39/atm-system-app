@@ -18,8 +18,8 @@ int	main(void)
 		green("\n===="); red("[2]"); green("==--==> "); blue("REGISTER A USER");
 		green(" <==--=="); red("[2]"); green("====");
 		yellow("\n=============================================");
-		green("\n===="); red("[3]"); green("======---===> "); red("EXIT");
-		green(" <===---====="); red("[3]"); green("====");
+		green("\n===="); red("[3]"); green("=====---===> "); red("EXIT");
+		green(" <===---======"); red("[3]"); green("====");
 		yellow("\n=============================================");
 		green("\n====["); yellow("OPTION"); green("]:\t");
 		scanf("%d", &option);
@@ -57,5 +57,5 @@ int	main(void)
 			sleep(1);
 		}
 	}
-	return (0);
+	exit(0);
 }

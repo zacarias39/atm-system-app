@@ -68,7 +68,9 @@ void	register_new_user(void)
 	FILE	*fp;
 	char	phone[100] = "../phones/";
 	char	username[100] = "../users/";
+	char	account[100] = "../id/";
 	char	link[200] = "ln ";
+	char	link_id[200] = "ln ";
 	char	option;
 	
 	
@@ -115,7 +117,8 @@ void	register_new_user(void)
 		fclose(fp);
 		sleep(3);
 		return ;
-	}	
+	}
+	strcat(account, itoa(user.account));
 	green("\n==->"); blue("ACCOUNT NUMBER:"); printf("\t\033[1;31m%06d", user.account);
 	yellow("\n=============================================");
 	user.balance = 0;
@@ -150,6 +153,9 @@ void	register_new_user(void)
 	strcat(link, strcat(phone, " "));
 	strcat(link, username);
 	system(link);
+	strcat(link_id, phone);
+	strcat(link_id, account);
+	system(link_id);
 	fclose(fp);
 	sleep(2);
 }
