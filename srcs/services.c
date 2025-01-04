@@ -136,12 +136,12 @@ void	atm_services(t_user *user)
 		{
 			green("\n========----====> "); yellow("BE CAREFUL!");
 			green(" <====----=======");
-			green("\n====--==> "); yellow("GOING TO 'WITHRAWAL MONEY'");
+			green("\n=====--==> ");  yellow("GOING TO 'TRANSFER MONEY'");
 			green(" <==--====");
 			yellow("\n==============================================");
 			printf("\n");
 			sleep(1);
-			withdrawal(user);
+			transfer(user);
 		}
 		else if (option == 7)
 		{
