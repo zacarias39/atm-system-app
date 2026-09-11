@@ -176,11 +176,6 @@ Future versions could include:
 ## 👨‍💻 Author
 
 **Zacarias Casimiro**
-
-🇦🇴 Angola | 42 Luanda Student
-
-Aspiring Software & Full-Stack Developer
-
 ---
 
 > **Small projects teach syntax.**
