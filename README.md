@@ -47,53 +47,19 @@ The application includes functionality for:
 
 Building this project helped me practice and better understand:
 
-- 🟦 **C Programming**
-- 🧠 **Problem Solving**
-- 📁 **File Handling**
-- 💾 **Data Storage**
-- 🧩 **Functions**
-- 🔗 **Pointers**
-- 🏗️ **Program Structure**
-- 📦 **Header Files**
-- 🔄 **Control Flow**
-- 🐛 **Debugging**
-- 🧹 **Code Organization**
+- **C Programming**
+- **Problem Solving**
+- **File Handling**
+- **Data Storage**
+- **Functions**
+- **Pointers**
+- **Program Structure**
+- **Header Files**
+- **Control Flow**
+- **Debugging**
+- **Code Organization**
 
 One of the biggest challenges was learning how to organize a project into multiple files instead of writing everything inside a single `main.c`.
-
----
-
-## 📂 Project Structure
-
-```text
-atm-system-app/
-│
-├── includes/
-│   └── Header files
-│
-├── srcs/
-│   ├── main.c
-│   ├── atm.c
-│   ├── register.c
-│   ├── account_info.c
-│   ├── balance.c
-│   ├── deposit.c
-│   ├── withdrawal.c
-│   ├── services.c
-│   ├── function.c
-│   └── color.c
-│
-├── users/
-│   └── User data
-│
-├── id/
-│   └── Account or identification data
-│
-└── phones/
-    └── Phone-related data
-```
-
-The project is organized by functionality, with different source files handling different responsibilities.
 
 ---
 
@@ -103,6 +69,7 @@ The project is organized by functionality, with different source files handling 
 - **GCC**
 - **Linux**
 - **File I/O**
+- **Shell Script**
 
 ---
 
@@ -114,24 +81,30 @@ The project is organized by functionality, with different source files handling 
 git clone https://github.com/zacarias39/atm-system-app.git
 ```
 
-### Navigate into the project
+### Navigate to the source directory
 
 ```bash
-cd atm-system-app
+cd atm-system-app/src
 ```
 
-### Compile the project
-
-Depending on your environment and project configuration, compile the source files using GCC:
+### Run the build script
 
 ```bash
-gcc srcs/*.c -o atm
+./make.sh
 ```
 
-### Run the application
+The `make.sh` script handles compiling and running the application.
+
+> If necessary, make the script executable first:
 
 ```bash
-./atm
+chmod +x make.sh
+```
+
+Then run:
+
+```bash
+./make.sh
 ```
 
 ---
@@ -162,11 +135,11 @@ It should not be used to manage real financial information or money.
 
 Future versions could include:
 
-- 🔐 Password encryption
-- 👥 User authentication
+- 🔐 Secure password handling
+- 👥 Improved user authentication
 - 🗄️ Database integration
 - 📊 Transaction history
-- 💸 Money transfer between accounts
+- 💸 Money transfers between accounts
 - 🧾 Transaction receipts
 - 🖥️ A graphical user interface
 - 🌐 A web-based version
